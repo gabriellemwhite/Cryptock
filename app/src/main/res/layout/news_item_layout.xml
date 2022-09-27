@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="11dp"
+                android:layout_marginBottom="7dp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="@dimen/cardview_default_elevation">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="400dp"
+                        android:layout_height="200dp"
+                        android:contentDescription="newsImage"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_newspaper" />
+
+                    <ImageView
+                        android:id="@+id/shadow_bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_alignBottom="@+id/imageView"
+                        android:src="@drawable/bottom_shadow" />
+
+                    <TextView
+                        android:id="@+id/source"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignStart="@+id/headline"
+                        android:layout_alignLeft="@+id/headline"
+                        android:layout_alignTop="@id/datetimeLayout"
+                        android:layout_alignEnd="@id/datetimeLayout"
+                        android:layout_alignRight="@id/datetimeLayout"
+                        android:layout_marginRight="160dp"
+                        android:drawablePadding="10dp"
+                        android:ellipsize="end"
+                        android:gravity="bottom"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="Source"
+                        android:textColor="@color/white" />
+
+                    <FrameLayout
+                        android:id="@+id/datetimeLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imageView"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="-50dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/round_white"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="22dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/ic_date" />
+
+                        <TextView
+                            android:id="@+id/datetime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="27dp"
+                            android:layout_marginRight="10dp"
+                            android:text="01 January 1990" />
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/headline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imageView"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="16dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Headline"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textColor="#CC000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/summary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/headline"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="16dp"
+                        android:text="Summary"
+                        android:textColor="#CC000000" />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/summary"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="5dp">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="22dp"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/clock" />
+
+                        <TextView
+                            android:id="@+id/simpletime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/summary"
+                            android:layout_gravity="top"
+
+                            android:layout_marginLeft="27dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="top"
+                            android:text="Time"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                    </FrameLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

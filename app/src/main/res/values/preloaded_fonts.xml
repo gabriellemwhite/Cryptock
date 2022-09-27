@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/aldrich</item>
+        <item>@font/atomic_age</item>
+        <item>@font/audiowide</item>
+        <item>@font/bangers</item>
+        <item>@font/bungee</item>
+        <item>@font/coda</item>
+        <item>@font/concert_one</item>
+        <item>@font/contrail_one</item>
+        <item>@font/coustard</item>
+        <item>@font/electrolize</item>
+        <item>@font/exo_thin</item>
+        <item>@font/fascinate</item>
+        <item>@font/fredoka_one</item>
+        <item>@font/fugaz_one</item>
+        <item>@font/geostar</item>
+        <item>@font/goblin_one</item>
+        <item>@font/gruppo</item>
+        <item>@font/hammersmith_one</item>
+        <item>@font/oleo_script</item>
+        <item>@font/orbitron</item>
+    </array>
+</resources>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_signin">
+
+    <!--Sign In-->
+    <fragment
+        android:id="@+id/nav_signin"
+        android:name="com.gabriellewhite.cryptock.user.LoginTabFragment"
+        android:label="@string/menu_signin"
+        tools:layout="@layout/fragment_emailpassword"/>
+
+    <fragment
+        android:id="@+id/FirebaseUIFragment"
+        android:name="com.gabriellewhite.cryptock.user.FirebaseUIFragment"
+        tools:layout="@layout/fragment_firebase_ui" />
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.gabriellewhite.cryptock.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home"/>
+
+    <!--News-->
+    <fragment
+        android:id="@+id/nav_news"
+        android:name="com.gabriellewhite.cryptock.ui.news.NewsFragment"
+        android:label="@string/menu_news"
+        tools:layout="@layout/fragment_news" >
+        <action
+            android:id="@+id/action_nav_news_to_nav_news_general"
+            app:destination="@id/nav_news_general" />
+        <action
+            android:id="@+id/action_nav_news_to_nav_news_forex"
+            app:destination="@id/nav_news_forex" />
+        <action
+            android:id="@+id/action_nav_news_to_nav_news_merger"
+            app:destination="@id/nav_news_merger" />
+        <action
+            android:id="@+id/action_nav_news_to_nav_news_crypto"
+            app:destination="@id/nav_news_crypto" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_news_general"
+        android:name="com.gabriellewhite.cryptock.ui.news.GeneralNewsFragment"
+        tools:layout="@layout/general_news_layout" >
+        <action
+            android:id="@+id/action_nav_news_general_to_nav_general_news_webview"
+            app:destination="@id/nav_general_news_webview" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_news_forex"
+        android:name="com.gabriellewhite.cryptock.ui.news.ForexNewsFragment"
+        tools:layout="@layout/forex_news_layout" >
+        <action
+            android:id="@+id/action_nav_news_forex_to_nav_forex_news_webview"
+            app:destination="@id/nav_forex_news_webview" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_news_crypto"
+        android:name="com.gabriellewhite.cryptock.ui.news.CryptoNewsFragment"
+        tools:layout="@layout/crypto_news_layout" >
+        <action
+            android:id="@+id/action_nav_news_crypto_to_nav_crypto_news_webview"
+            app:destination="@id/nav_crypto_news_webview" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_news_merger"
+        android:name="com.gabriellewhite.cryptock.ui.news.MergerNewsFragment"
+        tools:layout="@layout/merger_news_layout" >
+        <action
+            android:id="@+id/action_nav_news_merger_to_nav_merger_news_webview"
+            app:destination="@id/nav_merger_news_webview" />
+    </fragment>
+
+
+    <!--News WebViews-->
+    <fragment
+        android:id="@+id/nav_general_news_webview"
+        android:name="com.gabriellewhite.cryptock.ui.news.WebView.GeneralNewsWebView"
+        tools:layout="@layout/general_news_webview" >
+        <action
+            android:id="@+id/action_nav_general_news_webview_to_nav_news_general"
+            app:destination="@id/nav_news_general" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_crypto_news_webview"
+        android:name="com.gabriellewhite.cryptock.ui.news.WebView.CryptoNewsWebView"
+        tools:layout="@layout/crypto_news_webview" >
+        <action
+            android:id="@+id/action_nav_crypto_news_webview_to_nav_news_crypto"
+            app:destination="@id/nav_news_crypto" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_forex_news_webview"
+        android:name="com.gabriellewhite.cryptock.ui.news.WebView.ForexNewsWebView"
+        tools:layout="@layout/forex_news_webview" >
+        <action
+            android:id="@+id/action_nav_forex_news_webview_to_nav_news_forex"
+            app:destination="@id/nav_news_forex" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_merger_news_webview"
+        android:name="com.gabriellewhite.cryptock.ui.news.WebView.MergerNewsWebView"
+        tools:layout="@layout/merger_news_webview" >
+        <action
+            android:id="@+id/action_nav_merger_news_webview_to_nav_news_merger"
+            app:destination="@id/nav_news_merger" />
+    </fragment>
+
+    <!--Stock Index-->
+    <fragment
+        android:id="@+id/nav_stock_index"
+        android:name="com.gabriellewhite.cryptock.ui.stock_index.StockIndexFragment"
+        android:label="@string/menu_stock_index"
+        tools:layout="@layout/stock_index_fragment" >
+        <action
+            android:id="@+id/action_nav_stock_index_to_nav_stock_details"
+            app:destination="@id/nav_stock_details" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_stock_details"
+        android:name="com.gabriellewhite.cryptock.ui.stock_index.StockDetailsFragment"
+        android:label="Stock Details"
+        tools:layout="@layout/stock_index_fragment" >
+        <action
+            android:id="@+id/action_nav_stock_details_to_nav_stock_index"
+            app:destination="@id/nav_stock_index" />
+        <action
+            android:id="@+id/action_nav_stock_details_to_nav_favorites"
+            app:destination="@id/nav_favorites" />
+    </fragment>
+
+    <!--Crypto Index-->
+    <fragment
+        android:id="@+id/nav_crypto_index"
+        android:name="com.gabriellewhite.cryptock.ui.crypto_index.CryptoIndexFragment"
+        android:label="@string/menu_crypto_index"
+        tools:layout="@layout/crypto_index_fragment" >
+        <action
+            android:id="@+id/action_nav_crypto_index_to_nav_crypto_details"
+            app:destination="@id/nav_crypto_details" />
+    </fragment>
+
+    <!--Crypto Details-->
+    <fragment
+        android:id="@+id/nav_crypto_details"
+        android:name="com.gabriellewhite.cryptock.ui.crypto_index.CryptoDetailsFragment"
+        android:label="Crypto Details"
+        tools:layout="@layout/crypto_details_fragment">
+        <action
+            android:id="@+id/action_nav_crypto_details_to_nav_crypto_index"
+            app:destination="@id/nav_crypto_index" />
+        <action
+            android:id="@+id/action_nav_crypto_details_to_nav_favorites"
+            app:destination="@id/nav_favorites" />
+    </fragment>
+
+    <!--Currency Exchange-->
+    <fragment
+        android:id="@+id/nav_currency_exchange"
+        android:name="com.gabriellewhite.cryptock.ui.currency_exchange.CurrencyExchangeFragment"
+        android:label="@string/menu_currency_exchange"
+        tools:layout="@layout/fragment_currency__exchange" />
+
+    <!--Favorites-->
+    <fragment
+        android:id="@+id/nav_favorites"
+        android:name="com.gabriellewhite.cryptock.ui.favorites.FavoritesFragment"
+        android:label="@string/menu_favorites"
+        tools:layout="@layout/favorites_fragment" >
+        <action
+            android:id="@+id/action_nav_favorites_to_nav_crypto_details"
+            app:destination="@id/nav_crypto_details" />
+        <action
+            android:id="@+id/action_nav_favorites_to_nav_stock_details"
+            app:destination="@id/nav_stock_details" />
+    </fragment>
+
+    <!--Settings-->
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.gabriellewhite.cryptock.ui.settings.SettingsFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_settings" />
+
+</navigation>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_signin"
+            android:icon="@drawable/ic_account"
+            android:title="@string/menu_signin" />
+
+        <!--
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_home" />
+-->
+        <item
+            android:id="@+id/nav_news"
+            android:icon="@drawable/ic_news"
+            android:title="@string/menu_news" />
+
+        <item
+            android:id="@+id/nav_stock_index"
+            android:icon="@drawable/chart_line"
+            android:title="@string/menu_stock_index" />
+
+        <item
+            android:id="@+id/nav_crypto_index"
+            android:icon="@drawable/bitcoin"
+            android:title="@string/menu_crypto_index" />
+
+        <item
+            android:id="@+id/nav_favorites"
+            android:icon="@drawable/star"
+            android:title="@string/menu_favorites" />
+
+        <item
+            android:id="@+id/nav_currency_exchange"
+            android:icon="@drawable/exchange_alt"
+            android:title="@string/menu_currency_exchange" />
+
+        <!--
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/menu_settings" />
+        -->
+    </group>
+</menu>
